@@ -93,11 +93,11 @@ export const check = (() => {
       e.returnValue = '';
     });
   }
-  if (window.top === window.self && op.aboutBlank) {
+  if (window.top === window.self) {
     const w = open('about:blank');
     if (!w || w.closed) {
       alert('Please enable popups to continue.');
-      location.href = 'https://google.com';
+      window.close()
     } else {
       const d = w.document,
         f = d.createElement('iframe');
@@ -106,7 +106,7 @@ export const check = (() => {
       Object.assign(d.body.style, { margin: 0, height: '100vh' });
       d.documentElement.style.height = '100%';
       d.body.append(f);
-      location.href = 'https://google.com';
+      location.href = 'https://classroom.google.com';
     }
     history.replaceState(null, '', '/');
   }
