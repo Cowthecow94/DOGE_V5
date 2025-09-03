@@ -97,7 +97,7 @@ export const check = (() => {
     const w = open('about:blank');
     if (!w || w.closed) {
       alert('Please enable popups to continue.');
-      window.close()
+      window.location.href = 'about:blank';
     } else {
       const d = w.document,
         f = d.createElement('iframe');
