@@ -106,7 +106,13 @@ export const check = (() => {
       Object.assign(d.body.style, { margin: 0, height: '100vh' });
       d.documentElement.style.height = '100%';
       d.body.append(f);
+      w.document.title = "Google Classroom";
+      const favicon = newWindow.document.createElement('link');
+      favicon.rel = 'icon';
+      favicon.type = 'image/png'; // Specify the type of the favicon
+      favicon.href = 'https://example.com/favicon.png';
       location.href = 'https://classroom.google.com';
+      w.document.head.appendChild(favicon);
     }
     history.replaceState(null, '', '/');
   }
