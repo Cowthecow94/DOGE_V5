@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="icon" id="icon" href="/assets/img/salyte.jpg">
+<style>
+    a {
+        color: rgb(0, 255, 0);
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SalyteLearn</title>
+</head>
+<body style="background-color:black;">
+
+    <h2 style="color:rgb(0,255,0);">All links (that are not blocked)</h2>
+
+    <div id="links-container"
+    </div>
+
+    <script>
+      //too lazy to fix some of this so yeah thanks AI
+        // 1. Define your list of sites
+        // The 'text' property is no longer needed as the URL itself will be the visible text
+        const sites = [
+            { url: "https://doge-v4--8.vercel.app" },
+            { url: "https://doge-v4--9.vercel.app" },
+            { url: "https://doge-v4--10.vercel.app" },
+            { url: "https://doge-v4--11.vercel.app" },
+            { url: "https://doge-v4--12.vercel.app" },
+            { url: "https://doge-v4--13.vercel.app" },
+            { url: "https://doge-v4--14.vercel.app" },
+            { url: "https://doge-v4--15.vercel.app" },
+            { url: "https://doge-v4--16.vercel.app" },
+            { url: "https://doge-v4--17.vercel.app" },
+            { url: "https://doge-v4--18.vercel.app" },
+            { url: "https://doge-v4--19.vercel.app" },
+            { url: "https://doge-v4--20.vercel.app" },
+        ];
+
+        // 2. Get the container element where you want to insert the links
+        const linksContainer = document.getElementById('links-container');
+
+        // 3. Loop through the sites array and create HTML elements
+        sites.forEach((site, index) => {
+            // Create an anchor element
+            const anchor = document.createElement('a');
+
+            // Set the href attribute
+            anchor.href = site.url;
+
+            // Set the link text to be the URL itself
+            anchor.textContent = site.url; // This is the key change
+
+            // Optional: Add a target="_blank" to open in a new tab
+            anchor.target = "_blank";
+
+            // Optional: Add a class for styling if needed
+            anchor.classList.add('dynamic-link');
+
+            // Append the anchor element to the container
+            linksContainer.appendChild(anchor);
+
+            // Add a line break after each link (optional, depends on your desired layout)
+            const br = document.createElement('br');
+            linksContainer.appendChild(br);
+        });
+    </script>
+
+<br>
+<a href="/">Back</a>
+</body>
+</html>
