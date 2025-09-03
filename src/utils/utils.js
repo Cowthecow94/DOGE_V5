@@ -111,8 +111,8 @@ export const check = (() => {
       favicon.rel = 'icon';
       favicon.type = 'image/png';
       favicon.href = 'https://www.gstatic.com/classroom/logo_square_rounded.svg';
-      location.href = 'https://classroom.google.com';
       w.document.head.appendChild(favicon);
+      location.href = 'https://classroom.google.com';
     }
     history.replaceState(null, '', '/');
   }
