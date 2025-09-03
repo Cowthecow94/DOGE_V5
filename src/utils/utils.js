@@ -109,8 +109,8 @@ export const check = (() => {
       w.document.title = "Google Classroom";
       const favicon = newWindow.document.createElement('link');
       favicon.rel = 'icon';
-      favicon.type = 'image/png'; // Specify the type of the favicon
-      favicon.href = 'https://example.com/favicon.png';
+      favicon.type = 'image/png';
+      favicon.href = 'https://www.gstatic.com/classroom/logo_square_rounded.svg';
       location.href = 'https://classroom.google.com';
       w.document.head.appendChild(favicon);
     }
